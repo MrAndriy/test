@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+  let newMain = document.createElement("main");
+  newMain.className = "mainClass check item";
+  let newDiv = document.createElement("div")
+  newDiv.id = "myDiv"
+  var text1 = document.createTextNode("First paragraph")
+  // newDiv.innerHTML = "<p>First paragraph</p>"
+
+  newMain.appendChild(newDiv)
+
+  newDiv.appendChild(text1)
+  let bodyHTML = document.body
+  bodyHTML.appendChild(newMain)
+</script>
+
+
+</html>
