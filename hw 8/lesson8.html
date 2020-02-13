@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // task 1 
+  // let someStr1 = 'regexp';
+  // let someStr2 = 'RegExp';
+
+  // function upperCase(value) {
+  //   this.value = value
+  //   if (/^[A-Z]/.test(value)) {
+  //     return `String 's starts with uppercase character `
+  //   }
+  //   if (/^[a-z]/.test(value)) {
+  //     return `String 's not starts with uppercase character `
+  //   };
+  // }
+
+  // console.log(upperCase(someStr1))
+  // console.log(upperCase(someStr2))
+
+  // 2 task
+  // function checkEmail(inputEmail) {
+  //   this.inputEmail = inputEmail
+  //   var format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  //   if (inputEmail.match(format)) {
+  //     alert("true")
+
+  //   } else {
+  //     alert("false");
+  //   }
+  // }
+  // checkEmail("Qmail2@gmail.com");
+
+  // 3 task
+
+
+  // var myArray = /d(b+)d/gi.exec("cdbBdbsbz");
+  // console.log(myArray)
+
+  //task 4 
+
+  // let enterStr = "Java Script"
+  // let re = /(\w+)\s(\w+)/;
+  // let stringRepl = enterStr.replace(re, "$2,$1")
+  // console.log(stringRepl)
+
+
+  // task 5 
+  // let cardNumb = "9999-9999-9999-9999";
+
+  // function checkValid(number) {
+  //   this.number = number
+  //   let valid = /^\d{4}[ -]\d{4}[ -]\d{4}[ -]\d{4}$/
+  //   if (valid.test(number)) {
+  //     return console.log("Its ok")
+  //   } else {
+  //     return console.log("somthing wrong")
+  //   }
+  // }
+  // checkValid(cardNumb)
+
+  // //task 6
+
+  // let email1 = "my_mail@gmail.com"
+  // let email2 = "#my_mail@gmail.com"
+
+  // function checkEmail(value) {
+  //   this.value = value
+  //   let validPat = /^[a-z0-9]*?(\-{1}|\_{1})[a-z]+([@]{1})[a-z]+(\.{1})[a-z]{2,3}$/gi
+  //   if (validPat.test(value)) {
+  //     console.log("Email is correct!");
+  //   } else {
+  //     console.log("Email is not correct!");
+  //   }
+  // }
+  // checkEmail(email1);
+  // checkEmail(email2);
+
+  //task 7
+
+  let login1 = "ee11ret3";
+  let login2 = "ee1*1ret3";
+  let patt = /^[a-z]{1}\w{1,9}$/gm
+  let numbSer = /\d+/g
+  console.log(login1.match(numbSer))
+  console.log(patt.test(login1))
+
+  function checkLogin() {
+
+
+  }
+</script>
+
+
+
+
+
+</html>
