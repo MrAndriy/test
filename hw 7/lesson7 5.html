@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> 5 task</title>
+</head>
+
+<body>
+  <div id="parent" onmouseout="mouseOnTarget(event)">
+    <div id="child" onmouseover="mouseOnTarget(event)">
+      <button id="liveBut">Live button!</button>
+    </div>
+  </div>
+
+
+
+</body>
+
+<script>
+  liveBut.addEventListener('click', function click() {
+    console.log(`i was pressed`)
+  })
+
+  function mouseOnTarget() {
+    if (event.target.id != "child") {
+      console.log(`mouse on me`)
+    }
+    if (event.target.id != "liveBut") {
+      console.log(`mouse is not on me`)
+    }
+  }
+  // console.log(`${event.type } ${event.target.id} `)
+</script>
+
+</html>

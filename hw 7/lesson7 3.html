@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> 3 task</title>
+</head>
+
+<body>
+
+  <div>
+    <button id="buttonLeft">Click to make the page blue.</button>
+    <button id="buttonTop">Double-click to make the page pink.</button>
+    <button id="buttonRight">Click and hold to make the page brown.</button>
+    <a href=""> Hover over to make page yellow </a>
+
+  </div>
+</body>
+
+<script>
+  buttonLeft.onclick = function () {
+    document.body.style.backgroundColor = "blue";
+  }
+  buttonTop.addEventListener('dblclick', function pinkPage() {
+    document.body.style.backgroundColor = "pink";
+  })
+  buttonRight.addEventListener('mousedown', function mouseDown() {
+    document.body.style.backgroundColor = "brown";
+  })
+
+  buttonRight.addEventListener('mouseup', function mouseUp() {
+    document.body.style.backgroundColor = "white";
+  })
+  let linkColor = document.body.querySelector("a")
+  linkColor.addEventListener('mouseover', function () {
+    linkColor.style.backgroundColor = "yellow"
+
+  })
+  linkColor.addEventListener('mouseout', function () {
+    linkColor.style.backgroundColor = "white"
+
+  })
+</script>
+
+</html>

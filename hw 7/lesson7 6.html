@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> 6 task</title>
+</head>
+
+<body>
+  <p>Width: <span id="widthWindow"></span></p>
+  <p>Heigh: <span id="heightWindow"></span></p>
+</body>
+
+<script>
+  var onresize = function (e) {
+    document.getElementById("widthWindow").innerHTML = e.target.outerWidth;
+    document.getElementById("heightWindow").innerHTML = e.target.outerHeight;
+  }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>1 task</title>
+</head>
+
+<body>
+  <script>
+    // з вставленим контентом не працює
+    // let newWindow = window.open(
+    //   "https://www.youtube.com/watch?v=YYXbQjPAIdY",
+    //   "youtube",
+    //   "width=300,height=300,left=100,top=100"
+    // );
+    let newTab = window.open(
+      "",
+      "New_window",
+      "width=300,height=300,left=100,top=100"
+    );
+    setTimeout(() => newTab.resizeTo(500, 500), 2000);
+    setTimeout(() => newTab.moveTo(200, 200), 4000);
+    setTimeout(() => newTab.close(), 6000);
+    alert(newWindow.closed);
+  </script>
+</body>
+
+</html>
