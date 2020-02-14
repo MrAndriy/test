@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> 7 task</title>
+</head>
+
+<body>
+  <select id="country">
+    <option id="ukr" value="0">Ukraine</option>
+    <option id="usa" value="1">USA</option>
+    <option id="ger" value="2">Germany</option>
+  </select>
+  <select id="city"> </select>
+  <p id="text"></p>
+</body>
+
+<script>
+  const city = {
+    ukr: ["Kuiv", "Lviv", "Harkiv", "Dnipro"],
+    usa: ["NewYork", "Chicago", "Gonolulu", "Atlanta"],
+    ger: ["Aachen", "Eisenach", "Amberg", "Ansbach"]
+  };
+
+  let dirty = false; // checks if user ever selected any country
+  let countrySel = "no country selected"
+  let citySel = "no city selected"
+  let countrySelect = document.getElementById("country");
+  let citySelect = document.getElementById("city");
+
+  // create selector and set initial values
+  let newText = document.getElementById("text");
+  newText.innerHTML = `${countrySel} ${citySel}`
+
+  countrySelect.addEventListener("change", function () {
+    let selectedOption = countrySelect.options[countrySelect.selectedIndex].id;
+    let options = city[selectedOption];
+
+    // will work only the first time user selects country
+    if (options.length > 0 && !dirty) {
+      for (let i = 0; i < options.length; i++) {
+        let opt = options[i];
+        let el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        citySelect.appendChild(el);
+      }
+      dirty = true;
+    } // every other time user swithces //country we change text and value 
+    if (options.length > 0 && dirty) {
+      for (let i = 0; i < options.length - 1; i++) {
+        let opt = options[i];
+        citySelect.options[i].textContent = opt;
+        citySelect.options[i].value = opt;
+      }
+      // use the already defined variable
+      countrySel = countrySelect.options[countrySelect.selectedIndex].textContent;
+      citySel = citySelect.options[citySelect.selectedIndex].textContent;
+      newText.innerHTML = `${countrySel} ${citySel}`
+    }
+  })
+
+  citySelect.addEventListener("change", function () { // use the already defined variable
+    citySel = citySelect.options[citySelect.selectedIndex].textContent
+    countrySel = countrySelect.options[countrySelect.selectedIndex].textContent
+    newText.innerHTML = `${countrySel} ${citySel}`
+  })
+</script>
+
+</html>
