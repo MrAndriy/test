@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task 4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+  <input type="checkbox">
+
+
+  <script>
+    $('input[type=checkbox]').change(function () {
+      if ($('input[type=checkbox]:checked').length == 3) {
+        $('input[type=checkbox]').attr('disabled', 'disabled');
+        $('input[type=checkbox]:checked').removeAttr('disabled');
+      } else {
+        $('input[type=checkbox]').removeAttr('disabled');
+      }
+    });
+  </script>
+
+
+
+</body>
+
+
+
+</html>
