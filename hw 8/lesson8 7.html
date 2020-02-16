@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>7 task</title>
+</head>
+
+<body>
+  <p id="javascript"></p>
+</body>
+<script>
+  //task 7
+
+  let login1 = "ee11ret3";
+  let login2 = "ee1*1ret3";
+
+
+  function checkLogin(num) {
+    this.num = num;
+    let patt = /^[a-z]{1}\w{1,9}$/gm
+    numbers = num.match(/\d+/g)
+    console.log(patt.test(num))
+    var result = {};
+    numbers.forEach(function (a) {
+      result[a] = result[a] + 1 || 1;
+    });
+    for (var key in result)
+      console.log(`${key} ${result[key]}(times)`);
+
+
+  }
+  checkLogin(login1)
+  checkLogin(login2)
+</script>
+
+</html>
