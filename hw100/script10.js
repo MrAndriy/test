@@ -4,8 +4,7 @@
 // console.log(y); // "Sam"
 // console.log(z);
 
-
-//task 2 
+//task 2
 // let data = {
 //     names: ["Sam", "Tom", "Ray", "Bob"],
 //     ages: [20, 24, 22, 26],
